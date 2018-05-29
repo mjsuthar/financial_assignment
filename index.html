@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html ng-app='gemStore'>
+<head>
+	<title>Assingment</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type='text/css' href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+  	<script type="text/javascript" src="js/app.js"></script>
+  	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+  <div  ng-controller="Practice as tab" >
+  	<div class="tab">
+  	  <button id="home" ng-class="{active:tab.isSet(1)}" ng-click="tab.setTab(1)">Home</button>
+  	  <button id="logged" ng-class="{active:tab.isSet(2)}" ng-click="tab.setTab(2)">Log in</button>
+  	  <button id="signup" type="button" data-toggle="modal" data-target="#modal-id-1">Sign up</button>
+  	</div>
+  	
+    <div ng-show="tab.isSet(1)" id="home" class='home'>
+      <h1>Simplifying home Lones</h1><br>
+      <h3>This is our Home Page</h3>
+    </div>
+    
+    <div style="text-align: center;" style="background-color: white;"ng-show="tab.isSet(2)" id="login" >
+  		
+  		<div id='fillDetails' class="col-md-6 col-md-offset-3 log">
+  			<h1>Login to Your Account</h1>
+  			<form>
+  				<hr><label>Email id</label>
+  				<input type="email" class="form-control" id="email" name="email" placeholder="email@domain.com">
+  				<label>Password</label>
+  				<input type="password" class="form-control" id="password" name="Password">
+  				<button class="submit-button block-button" type="button">LOGIN</button><hr>
+  			</form>
+  			<h4>Forgot your password?</h4>
+  			<h5>No worries, <a href="">clck here</a> to reset your password</h5>
+  		</div>
+    </div>
+
+    	 <div class="modal fade" id="modal-id-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+							</div>
+							<div class="modal-body log">
+								<label>What,s Your First Name?</label>
+								<input type="text" class="form-control" name="name" placeholder="eg: Rajni">
+								<label>Email id</label>
+								<input type="email" class="form-control" name="name" placeholder="eg: rajni@kabali.com">
+								<label>Mobile Number?</label>
+								<input type="number" class="form-control" name="name" placeholder="Your 10 Digit Mobile Number">
+								<input type="checkbox" name="yes">Call me. I want to know more.<br>
+								<button class="submit-button block-button" type="button">Sign up</button>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+			</div>
+    
+
+  </div>
+</body>
+</body>
+</html>
